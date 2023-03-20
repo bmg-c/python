@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
     random2dlist = list()
     for i in range(0, 10):
-        random2dlist.append(random.sample(random.sample(range(1, 91), 10), 10))
+        random2dlist.append(random.sample(range(1, 91), 10))
     print(random2dlist)
     print()
 
