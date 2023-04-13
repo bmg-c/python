@@ -1,4 +1,10 @@
 class FractionalNum:
+    def __init__(self, numerator: int, denominator: int):
+        self.numerator: int = numerator
+        self.denominator: int = denominator
+
+        self._reduce_fraction()
+
     def _find_gcd(self):
         a = self.numerator
         b = self.denominator
@@ -13,12 +19,6 @@ class FractionalNum:
 
         self.numerator /= gcd
         self.denominator /= gcd
-
-    def __init__(self, numerator: int, denominator: int):
-        self.numerator: int = numerator
-        self.denominator: int = denominator
-
-        self._reduce_fraction()
 
     def __str__(self):
         if abs(self.numerator) < abs(self.denominator):
